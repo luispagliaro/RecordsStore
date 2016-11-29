@@ -1,0 +1,5 @@
+<h3>Top Records</h3>
+
+<div *ngFor="let record of records" (click)="goToDetail(record)">
+    <h4>{{record.title}}</h4>
+</div>

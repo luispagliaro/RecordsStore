@@ -1,0 +1,17 @@
+<h2>Records</h2>
+
+<app-record-search></app-record-search>
+
+<ul>
+	<li *ngFor="let record of records" (click)="goToDetail(record)">
+		<span>{{record.id}}</span> {{record.title}}
+		<button  *ngIf="loggedIn" (click)="deleteRecord(record); $event.stopPropagation()">x</button>
+	</li>
+</ul>
+
+<div *ngIf="loggedIn">
+	<label>Record title:</label> <input #recordTitle />
+	<button (click)="addRecord(recordTitle.value); recordTitle.value=''">Add</button>
+</div>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>

@@ -1,0 +1,19 @@
+<div *ngIf="record">
+	<h2>{{record.title}} Details</h2>
+
+	<div>
+		<label>ID:</label> {{record.id}}
+	</div>
+
+	<div>
+		<label>Title:</label> {{record.title}}
+	</div>
+
+	<div *ngIf="loggedIn">
+		<input type="text" [(ngModel)]="record.title">
+
+		<button (click)="updateRecord()">Save</button>
+	</div>
+
+	<button (click)="goBack()">Back</button>
+</div>

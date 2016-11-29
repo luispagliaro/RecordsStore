@@ -1,0 +1,9 @@
+<div id="search-component">
+	<h4>Record Search</h4>
+	<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+	<div>
+		<div *ngFor="let record of records | async" (click)="goToDetail(record)" class="search-result">
+			{{record.title}}
+		</div>
+	</div>
+</div>

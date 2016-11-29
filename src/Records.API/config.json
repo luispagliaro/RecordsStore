@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "RecordsStoreContextConnection": "Server=(localdb)\\MSSQLLocalDB;Database=RecordsStoreDb;Trusted_Connection=true;MultipleActiveResultSets=true;"
+  }
+}
