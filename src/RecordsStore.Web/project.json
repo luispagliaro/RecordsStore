@@ -39,15 +39,7 @@
 
   "publishOptions": {
     "include": [
-      "wwwroot",
       "web.config"
     ]
-  },
-
-  "scripts": {
-    "ng-build": [ "powershell -Command \"$env:project:Directory=Get-Location;Start-Process powershell -Verb runAs -ArgumentList \\\"-Command `\\\"Set-Location $env:project:Directory;ng serve`\\\"\\\" " ]
-  },
-  "-vs-binding": {
-    "BeforeBuild": [ "ng-build" ]
   }
 }
